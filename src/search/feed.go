@@ -1,3 +1,5 @@
+package search
+
 /**
  * @Time    : 2023/6/25 16:33
  * @File    : feed.go
@@ -6,8 +8,6 @@
  * @IDE     : GoLand
  * @Desc    :
  */
-
-package search
 
 import (
 	"encoding/json"
@@ -28,6 +28,7 @@ func RetrieveFeeds() ([]*Feed, error) {
 		return nil, err
 	}
 
+	// defer
 	defer file.Close()
 
 	var feeds []*Feed

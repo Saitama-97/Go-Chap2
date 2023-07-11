@@ -1,3 +1,5 @@
+package main
+
 /**
  * @Time    : 2023/6/25 16:31
  * @File    : main.go
@@ -6,8 +8,6 @@
  * @IDE     : GoLand
  * @Desc    :
  */
-
-package main
 
 import (
 	"chapter2/src/search"

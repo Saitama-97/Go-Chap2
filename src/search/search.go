@@ -1,3 +1,5 @@
+package search
+
 /**
  * @Time    : 2023/6/25 16:33
  * @File    : search.go
@@ -6,8 +8,6 @@
  * @IDE     : GoLand
  * @Desc    :
  */
-
-package search
 
 import (
 	"log"
@@ -48,4 +48,12 @@ func Run(searchTerm string) {
 
 	Display(results)
 
+}
+
+func Register(feedType string, matcher Matcher) {
+	if _, exists := matchers[feedType]; exists {
+		log.Fatalln(feedType, "Matcher already registered")
+	}
+	log.Println("Register", feedType, "matcher")
+	matchers[feedType] = matcher
 }
